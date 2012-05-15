@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Smart</title>
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+<link href="css/default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+	<ul id="menu">
+		<li><a href="#" accesskey="1" title="">Article</a></li>
+		<li><a href="#" accesskey="2" title="">discussion</a></li>
+		<li><a href="#" accesskey="3" title="">View source</a></li>
+		<li><a href="#" accesskey="4" title="">history</a></li>
+		<li></li>
+	</ul>
+	<form id="search" method="get" action="">
+		<fieldset>
+		<input name="input1" type="text" id="input1" />
+		<input name="input2" type="submit" id="input2" value="Search" />
+		</fieldset>
+	</form>
+</div>
+<div id="content">
+	<div id="colOne" sty>
+    <div style="text-align:center; background:#f6f6f6;" ><img src="images/logo.gif" alt="" width="160" height="124" /></div>
+		
+		<div class="box">
+			<h3>Nvigation</h3>
+			<ul class="bottom">
+				<li class="first"><a href="index.html">Main Page</a></li>
+				
+			</ul>
+		</div>
+        <div class="box">
+			<h3>Totorials</h3>
+			<ul class="bottom">
+				<li class="first"><a href="how_to_build.html">Build a SMART App</a></li>
+				<li><a href="how_to_build_rest_api.html">App using REST API</a></li>
+				<li><a href="#">Background + Helper Apps</a></li>
+				<li><a href="#">Frame UI Apps</a></li>
+				<li><a href="#">Got Statins? App</a></li>
+				<li><a href="#">RxReminder App</a></li>
+			</ul>
+		</div>
+		<div class="box">
+			<h3>Data Modeling + Querying</h3>
+			<ul class="bottom">
+				<li class="first"><a href="#">Intro to RDF and SPARQL</a></li>
+				<li><a href="#">SPARQL Examples for SMART</a></li>
+				<li><a href="#">SMART data: best practices</a></li>
+				<li><a href="#">$.Deferred for parallel queries</a></li>
+				
+			</ul>
+		</div>
+        
+        <div class="box">
+			<h3>Reference</h3>
+			<ul class="bottom">
+				<li class="first"><a href="#">Data Model</a></li>
+				<li><a href="#">REST API</a></li>
+				<li><a href="#">App Manifest</a></li>
+				<li><a href="#">Change Log</a></li>
+				
+			</ul>
+		</div>
+        
+        <div class="box">
+			<h3>Libraries</h3>
+			<ul class="bottom">
+				<li class="first"><a href="#">Javascript</a></li>
+				<li><a href="#">Python</a></li>
+				<li><a href="#">Java</a></li>
+				<li><a href="#">.NET</a></li>
+                <li><a href="#">Container Javascript</a></li>                
+				
+			</ul>
+		</div>
+        
+         <div class="box">
+			<h3>Presentation (2010-08-26)</h3>
+			<ul class="bottom">
+				<li class="first"><a href="#">Architecture</a></li>
+				<li><a href="#">Governance</a></li>
+				<li><a href="#">Demo</a></li>
+				              
+				
+			</ul>
+		</div>
+        <div class="box">
+			<h3>Downloads</h3>
+			<ul class="bottom">
+				<li class="first"><a href="#">Download Source + SMART VM</a></li>			              
+				
+			</ul>
+		</div>
+        
+        <div class="box">
+			<h3>Toolbox</h3>
+			<ul class="bottom">
+				<li class="first"><a href="#">What links here</a></li>
+				<li><a href="#">Related changes</a></li>
+				<li><a href="#">Upload file</a></li>
+				 <li><a href="#">Special pages</a></li>
+				<li><a href="#">Printable version</a></li>      
+                <li><a href="#">Permanent link</a></li>                   
+				
+			</ul>
+		</div>
+        
+  </div>
+	<div id="colTwo">
+		<h2>Developers Documentation: Getting Started</h2>
+		<h3 id="siteSub">From Smart-project</h3>
+<p>This Guide is intended for software developers who want to write   SMART apps -- and it's a work in progress!  If you have any questions,   please drop a note in our </p>
+		<table id="toc" class="toc" summary="Contents">
+		  <tbody>
+		    <tr>
+		      <td><div id="toctitle">
+		        <h2>Contents</h2>
+		      </div>
+		        <ul>
+		          <li class="toclevel-1"><a href="#What_is_SMART.3F"><span class="tocnumber">1</span> <span class="toctext">What is SMART?</span></a></li>
+		          <li class="toclevel-1"><a href="#Anatomy_of_a_SMART_App"><span class="tocnumber">2</span> <span class="toctext">Anatomy of a SMART App</span></a>
+		            <ul>
+		              <li class="toclevel-2"><a href="#SMART_Connect"><span class="tocnumber">2.1</span> <span class="toctext">SMART Connect</span></a></li>
+		              <li class="toclevel-2"><a href="#SMART_REST"><span class="tocnumber">2.2</span> <span class="toctext">SMART REST</span></a></li>
+	                </ul>
+	              </li>
+		          <li class="toclevel-1"><a href="#OK.2C_I.27m_ready_to_code"><span class="tocnumber">3</span> <span class="toctext">OK, I'm ready to code</span></a></li>
+	            </ul></td>
+	        </tr>
+	      </tbody>
+	  </table>
+		<div class="box">
+<h3><span class="mw-headline"><a name="What_is_SMART.3F" id="What_is_SMART.3F"></a>What is SMART?</span></h3>
+			<p>SMART provides a unified mechanism for diverse applications to interact with medical-record data. <em>SMART Apps</em> built against the SMART API can be embedded within any <em>SMART Container</em>.
+			  A SMART Container is, most often, an Electronic Medical Record (EMR) 
+			  system used by physicians, but might also be a Personal Health Record 
+		    (PHR) such as <a href="http://indivohealth.org/" class="external text" title="http://indivohealth.org/" rel="nofollow">Indivo</a> used by patients, or a data-analytics platform such as <a href="https://www.i2b2.org/" class="external text" title="https://www.i2b2.org/" rel="nofollow">i2b2</a> used by researchers. </p>
+			<p>For example, a SMART app might analyze a person's risk of heart 
+			  disease based on recent labs and demographic information. This app can 
+			  then be deployed on Regenstrief's CareWeb EHR, Children Hospital 
+			  Boston's Indivo PCHR, or Harvard Medical School's i2b2 analytics engine.
+			  As other EMR vendors adopt the SMART platform, the app's reach 
+			  increases <i>without changing a single line of code</i>. </p>
+			<table width="100%" border="0" cellspacing="0" cellpadding="10">
+			  <tr>
+			    <td width="57%"><img src="images/300px-Demo.png" alt="" width="300" height="212" /></td>
+			    <td width="43%"><img src="images/300px-Demo_002.png" alt="" width="300" height="212" /></td>
+		      </tr>
+		  </table>
+			<p class="bottom">&nbsp;</p>
+		</div>
+		<div class="box">
+			<h3><span class="mw-headline"><a name="Anatomy_of_a_SMART_App" id="Anatomy_of_a_SMART_App"></a>Anatomy of a SMART App</span></h3>
+		  <p><img src="images/Anatomy-smart-app.png" alt="" width="397" height="294" /></p>
+			<p>A SMART app is a normal web application, embedded as a frame within 
+			  the SMART Container's user interface, with access to the SMART API for 
+			  interacting with health data. A patient, Penny, may use a medication 
+			  browser app within her PCHR.  Meanwhile, a primary care doctor Dave may 
+			  use the same app within his clinic-based EMR to view the medications of a
+			  patient scheduled for an appointment next week. Penny's PCHR and Dave's
+			  EMR are both SMART containers; they both expose the SMART API; and they
+			  can both display the medication browser app. Though they may function 
+			  very differently behind the scenes, they can both embed the exact same 
+			  medication-list-manager app because they present the same API. 
+			  Importantly, in any given user session (Penny's or Dave's), the 
+			  medication-list-manager is connected to only <i>one</i> SMART container. </p>
+			<p>The screenshots to the right demonstrate the same medication list
+			  application running in the context of two different SMART containers: a
+			  simplified EMR, and the analytics platform i2b2. </p>
+			<p>A SMART app can access the SMART API in two ways: </p>
+            <ol>
+              <li> via &quot;SMART Connect&quot;, using Javascript calls from our client library </li>
+              <li> via &quot;SMART REST&quot;, using OAuth-signed REST calls to a SMART container </li>
+            </ol>
+          <p>Both of these approaches can be used to get at the same underlying 
+              data. SMART Connect is for simple applications whose logic can be 
+              completely built in HTML and JavaScript. SMART REST is for applications 
+              that may need to perform significant back-end processing, in particular 
+              when using additional external data sources. </p>
+          <p>Whether you access data via SMART Connect, SMART REST, or a combination, your app will load the <a href="http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_SMART_App_Javascript_Libraries" title="Developers Documentation: SMART App Javascript Libraries"> SMART App Javascript Libraries</a>. In the case of SMART Connect, this 
+              library is the sole access point. In the case of SMART REST, the library
+              provides the OAuth token handoff and medical-record context, which your
+              app can then send back to its back-end for use in REST calls.            </p>
+          <p class="bottom">&nbsp;</p>
+		</div>
+        
+        <div class="box">
+			<h3><span class="mw-headline"><a name="SMART_Connect" id="SMART_Connect"></a>SMART Connect</span></h3>
+			<p>Writing a purely browser-based app in HTML5 and JavaScript is as easy
+ as including the client-side JavaScript libraries and making API calls!
+  Keep in mind that SMART Connect calls can only access data while the 
+end-user remains online, since authentication depends on that user's 
+existing session with the SMART container. If your app needs to access 
+data from your web application's backend or while the user is offline, 
+you'll need to make some REST calls as well. </p>
+<p class="bottom">&nbsp;</p>
+	  </div>
+      
+      
+      
+      <div class="box">
+			<h3><span class="mw-headline"><a name="SMART_REST" id="SMART_REST"></a>SMART REST</span></h3>
+			<p>Apps with server-side requirements, or apps that need offline access 
+to the SMART API, use the REST interface, which
+exposes data as resources accessible via HTTP GET, POST, PUT, or DELETE.
+  To ensure apps are authorized to access the resources
+they request, the SMART container authenticates each REST API call using
+ OAuth, a scheme by which a SMART container or user may delegate
+</p>
+			<p>The delegation takes the form of a token/secret pair, generated 
+			  by the SMART container and handed off to the application (with 
+			  permission!). After tokens are obtained, each HTTP request is signed 
+			  using the shared secret. </p>
+			<p>Writing a SMART REST app requires a bit more work than a SMART Connect app, because the app must be able to: </p>
+            <ol>
+              <li> Interact with the SMART container to obtain tokens </li>
+              <li> Store tokens securely, maintaining appropriate sessions </li>
+              <li> Select the appropriate token and sign each SMART REST API call </li>
+            </ol>
+            <p>A few words about #1.  The <a href="http://tools.ietf.org/html/rfc5849" class="external text" title="http://tools.ietf.org/html/rfc5849" rel="nofollow">OAuth specification</a> defines a &quot;dance&quot; among three parties (client app, the server, and the 
+              resource owner) enabling the client app to obtain access tokens. SMART 
+              REST apps obtain tokens by a simpler alternative using our JavaScript 
+              library, as explained in our tutorials. </p>
+            <p>To simplify the job of working with SMART REST, we provide client libraries in <a href="https://github.com/chb/smart_client_java" class="external text" title="https://github.com/chb/smart_client_java" rel="nofollow">java</a> and <a href="https://github.com/chb/smart_client_python" class="external text" title="https://github.com/chb/smart_client_python" rel="nofollow">python</a>. </p>
+<p class="bottom">&nbsp;</p>
+	  </div>
+        
+  
+  
+  <div class="box">
+	  <h3><span class="mw-headline"><a name="OK.2C_I.27m_ready_to_code" id="OK.2C_I.27m_ready_to_code"></a>OK, I'm ready to code</span></h3>
+<p>You'll want to follow our HOWTOs in order: <big> </big></p>
+            <ol>
+              <li> <big><a href="http://wiki.chip.org/smart-project/index.php/HOWTO_Build_a_SMART_App" title="HOWTO Build a SMART App">HOWTO Build a SMART App</a>, which focuses on SMART Connect. </big></li>
+              <li> <big><a href="http://wiki.chip.org/smart-project/index.php/HOWTO_Build_a_SMART_App_-_REST_API_Calls" title="HOWTO Build a SMART App - REST API Calls">HOWTO Build a SMART App - REST API Calls</a> </big></li>
+              <li> <big><a href="http://wiki.chip.org/smart-project/index.php/HOWTO_Build_SMART_Background_and_Helper_Apps" title="HOWTO Build SMART Background and Helper Apps">HOWTO Build SMART Background and Helper Apps</a> </big><big></big> </li>
+      </ol>
+<p>For all of these, you can find our code on <a href="https://github.com/chb/" class="external text" title="https://github.com/chb/" rel="nofollow">SMART source code on github</a>. </p>
+            <!-- Saved in parser cache with key smartproject:pcache:idhash:77-0!1!0!!en!2!edit=0 and timestamp 20120508033558 -->
+            <div class="printfooter"> Retrieved from &quot;<a href="http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_Getting_Started">http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_Getting_Started</a>&quot;</div>
+      <p class="bottom">&nbsp;</p>
+	  </div>      
+        
+        
+  </div>
+</div>
+<div id="footer">
+	<p>This page was last modified 17:43, 28 March 2012.
+This page has been accessed 21,360 times.</a>.</p>
+</div>
+</body>
+</html>
+
+			<div style="text-align: center; margin-top: 1.0em;">
+			
+			</div>
+		

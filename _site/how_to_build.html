@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Smart</title>
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+<link href="css/default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+	<ul id="menu">
+		<li><a href="#" accesskey="1" title="">Article</a></li>
+		<li><a href="#" accesskey="2" title="">discussion</a></li>
+		<li><a href="#" accesskey="3" title="">View source</a></li>
+		<li><a href="#" accesskey="4" title="">history</a></li>
+		<li></li>
+	</ul>
+	<form id="search" method="get" action="">
+		<fieldset>
+		<input name="input1" type="text" id="input1" />
+		<input name="input2" type="submit" id="input2" value="Search" />
+		</fieldset>
+	</form>
+</div>
+<div id="content">
+	<div id="colOne" sty>
+    <div style="text-align:center; background:#f6f6f6;" ><img src="images/logo.gif" alt="" width="160" height="124" /></div>
+		
+		<div class="box">
+			<h3>Nvigation</h3>
+			<ul class="bottom">
+				<li class="first"><a href="index.html">Main Page</a></li>
+				
+			</ul>
+		</div>
+        <div class="box">
+			<h3>Totorials</h3>
+			<ul class="bottom">
+				<li class="first"><a href="how_to_build.html">Build a SMART App</a></li>
+				<li><a href="how_to_build_rest_api.html">App using REST API</a></li>
+				<li><a href="#">Background + Helper Apps</a></li>
+				<li><a href="#">Frame UI Apps</a></li>
+				<li><a href="#">Got Statins? App</a></li>
+				<li><a href="#">RxReminder App</a></li>
+			</ul>
+		</div>
+		<div class="box">
+			<h3>Data Modeling + Querying</h3>
+			<ul class="bottom">
+				<li class="first"><a href="#">Intro to RDF and SPARQL</a></li>
+				<li><a href="#">SPARQL Examples for SMART</a></li>
+				<li><a href="#">SMART data: best practices</a></li>
+				<li><a href="#">$.Deferred for parallel queries</a></li>
+				
+			</ul>
+		</div>
+        
+        <div class="box">
+			<h3>Reference</h3>
+			<ul class="bottom">
+				<li class="first"><a href="#">Data Model</a></li>
+				<li><a href="#">REST API</a></li>
+				<li><a href="#">App Manifest</a></li>
+				<li><a href="#">Change Log</a></li>
+				
+			</ul>
+		</div>
+        
+        <div class="box">
+			<h3>Libraries</h3>
+			<ul class="bottom">
+				<li class="first"><a href="#">Javascript</a></li>
+				<li><a href="#">Python</a></li>
+				<li><a href="#">Java</a></li>
+				<li><a href="#">.NET</a></li>
+                <li><a href="#">Container Javascript</a></li>                
+				
+			</ul>
+		</div>
+        
+         <div class="box">
+			<h3>Presentation (2010-08-26)</h3>
+			<ul class="bottom">
+				<li class="first"><a href="#">Architecture</a></li>
+				<li><a href="#">Governance</a></li>
+				<li><a href="#">Demo</a></li>
+				              
+				
+			</ul>
+		</div>
+        <div class="box">
+			<h3>Downloads</h3>
+			<ul class="bottom">
+				<li class="first"><a href="#">Download Source + SMART VM</a></li>			              
+				
+			</ul>
+		</div>
+        
+        <div class="box">
+			<h3>Toolbox</h3>
+			<ul class="bottom">
+				<li class="first"><a href="#">What links here</a></li>
+				<li><a href="#">Related changes</a></li>
+				<li><a href="#">Upload file</a></li>
+				 <li><a href="#">Special pages</a></li>
+				<li><a href="#">Printable version</a></li>      
+                <li><a href="#">Permanent link</a></li>                   
+				
+			</ul>
+		</div>
+        
+  </div>
+	<div id="colTwo">
+		<h2><span class="firstHeading">HOWTO Build a SMART App</span></h2>
+<p><big>This document is a complete SMART-App-Building walk-through. You should first read the <a href="index.html" title="Main Page">Main Page</a>. </big></p>
+        <table id="toc" class="toc" summary="Contents">
+          <tbody>
+            <tr>
+              <td><div id="toctitle">
+                <h2>Contents</h2>
+              </div>
+                <ul>
+                  <li class="toclevel-1"><a href="#ScreenCast"><span class="tocnumber">1</span> <span class="toctext">ScreenCast</span></a></li>
+                  <li class="toclevel-1"><a href="#Setting_up_your_Environment"><span class="tocnumber">2</span> <span class="toctext">Setting up your Environment</span></a></li>
+                  <li class="toclevel-1"><a href="#Barebones_App"><span class="tocnumber">3</span> <span class="toctext">Barebones App</span></a>
+                    <ul>
+                      <li class="toclevel-2"><a href="#Index"><span class="tocnumber">3.1</span> <span class="toctext">Index</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="toclevel-1"><a href="#Using_the_SMART_API"><span class="tocnumber">4</span> <span class="toctext">Using the SMART API</span></a>
+                    <ul>
+                      <li class="toclevel-2"><a href="#Asynchronous_Calls"><span class="tocnumber">4.1</span> <span class="toctext">Asynchronous Calls</span></a></li>
+                      <li class="toclevel-2"><a href="#Data_in_RDF_form"><span class="tocnumber">4.2</span> <span class="toctext">Data in RDF form</span></a></li>
+                      <li class="toclevel-2"><a href="#The_Complete_App"><span class="tocnumber">4.3</span> <span class="toctext">The Complete App</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="toclevel-1"><a href="#What_Next.3F"><span class="tocnumber">5</span> <span class="toctext">What Next?</span></a></li>
+                </ul></td>
+            </tr>
+          </tbody>
+      </table>
+        <p>&nbsp;</p>
+        <div class="box">
+<h3><span class="mw-headline"><a name="ScreenCast" id="ScreenCast"></a>ScreenCast</span></h3>
+			<p>We are re-recording the screencast to catch up with the latest API 
+<a href="http://vimeo.com/20113823" class="external text" title="http://vimeo.com/20113823" rel="nofollow">old screencast</a>.</p>
+			<p class="bottom">&nbsp;</p>
+    </div>
+		<div class="box">
+			<h3><span class="mw-headline"><a name="Setting_up_your_Environment" id="Setting_up_your_Environment"></a>Setting up your Environment</span></h3>
+		  <p>A SMART app is a web application that is loaded in an IFRAME hosted 
+by a SMART container. That means you need to (a) write a web app, and 
+(b) connect it to a SMART container. </p>
+		  <p>You can choose any toolkit you want to write a web app: Java 
+		    Spring, Ruby on Rails, Python/Django, etc. For the purposes of this 
+		    documentation, we've chosen <a href="http://webpy.org/" class="external text" title="http://webpy.org" rel="nofollow">webpy</a>,
+		    a very simple, minimalist Python web framework, which helps us show you
+		    the important SMART-related code more quickly. Also, if you want to get
+		    going quickly with the more advanced app features, you probably want to
+		    stick with Java or Python for now, as those are the two programming 
+		    languages in which we've built client libraries. That said, if you're 
+		    comfortable with OAuth and REST, you can use another programming 
+		    language without fear. </p>
+		  <p>We also provide you with a SMART EMR hosted at <tt>sandbox.smartplatforms.org</tt>.
+		    We call it the SMART Reference EMR, and we've loaded it with 50 patient
+		    records on which you can try out your app. To get going, you'll need 
+		    to: </p>
+          <ol>
+            <li>Navigate to the [<a href="http://sandbox.smartplatforms.org/login" class="external text" title="http://sandbox.smartplatforms.org/login" rel="nofollow">developers' sandbox</a>] </li>
+            <li>If you haven't done so already, create an account, otherwise just log back in </li>
+            <li>Select a patient </li>
+            <li>Run the app called &quot;My App&quot; </li>
+          </ol>
+          <p>This will open a SMART app iframe pointing to <tt>localhost:8000</tt>, which is where your app should be running. If you need an app with a different hostname (say, <tt>my_internal_server.net</tt>), just e-mail joshua dot mandel at childrens.harvard.edu with a <a href="http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_Packaging_Applications_via_SMART_Manifest" title="Developers Documentation: Packaging Applications via SMART Manifest"> manifest file</a> and we'll set you up! </p>
+<p class="bottom">&nbsp;</p>
+		</div>
+        
+        <div class="box">
+		  <h3><span class="mw-headline"><a name="Barebones_App" id="Barebones_App"></a>Barebones App</span></h3>
+		  <p>Your app needs to serve at least the following URL: </p>
+            <ul>
+              <li> <tt><a href="http://localhost:8000/smartapp/index.html" class="external free" title="http://localhost:8000/smartapp/index.html" rel="nofollow">http://localhost:8000/smartapp/index.html</a></tt> </li>
+            </ul>
+            <p>You could set up Apache to serve these as static files. In this 
+              documentation, we're using webpy for everything, just for consistency. 
+              Also, you may find that, for putting up a couple of static files, it's 
+              easier to get going with webpy than with Apache. </p>
+      </div>
+      
+      
+      
+      <div class="box">
+			<h3><span class="mw-headline"><a name="Index" id="Index"></a>Index</span></h3>
+		<p>The index file, served at <tt><a href="http://localhost:8000/smartapp/index.html" class="external free" title="http://localhost:8000/smartapp/index.html" rel="nofollow">http://localhost:8000/smartapp/index.html</a></tt> is where all the fun happens! Make sure to include the SMART page script: </p>
+            <pre class="code xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">&quot;http://sample-apps.smartplatforms.org/framework/smart/scripts/smart-api-client.js&quot;</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+            </pre>
+            <p>This script serves to connect your HTML page to the SMART JavaScript library. </p>
+            <p>Once the client-side library has loaded, your index HTML page has access to a <tt>SMART</tt> JavaScript object that provides some basic context: </p>
+            <ul>
+              <li> <tt>SMART.user</tt>, which provides the name and ID of the user who launched the app, typically the physician logged into the SMART EMR. </li>
+              <li> <tt>SMART.record</tt>, which provides the name and ID of the patient whose record is loaded. </li>
+            </ul>
+            <p>For a complete reference of the app context, check out <a href="http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_SMART_App_Javascript_Libraries#Interacting_with_the_SMART_Container_via_javascript" title="Developers Documentation: SMART App Javascript Libraries">the JavaScript Library reference</a>. </p>
+            <p>A more complete index file that displays the current patient's name might thus look like: </p>
+            <pre class="code xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="title">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">&quot;http://sample-apps.smartplatforms.org/framework/smart/scripts/smart-api-client.js&quot;</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+ <span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="title">body</span>&gt;</span><span class="tag">&lt;<span class="title">h1</span>&gt;</span>Hello <span class="tag">&lt;<span class="title">span</span> <span class="attribute">id</span>=<span class="value">&quot;name&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+ 
+ <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
+ SMART.ready(<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+   document.getElementById(<span class="string">'name'</span>).innerHTML = SMART.record.full_name;
+ });
+ </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+ <span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+            </pre>
+<p class="bottom">&nbsp;</p>
+	  </div>
+        
+  
+  
+  <div class="box">
+	  <h3><span class="mw-headline"><a name="Using_the_SMART_API" id="Using_the_SMART_API"></a>Using the SMART API</span></h3>
+<p>At this point, your SMART app is ready to make API calls to obtain 
+health data. Remember that your app is instantiated in an IFRAME for the
+ specific purpose of accessing a <em>single</em> medical record. This 
+means that, from JavaScript, you can request medical data without 
+specifying patient context, because it's <em>already determined by the JavaScript context</em>. 
+<!-- Saved in parser cache with key smartproject:pcache:idhash:77-0!1!0!!en!2!edit=0 and timestamp 20120508033558 -->
+      </p>
+<p class="bottom">&nbsp;</p>
+	  </div>  
+      
+      <div class="box">
+	  <h3><span class="mw-headline"><a name="Asynchronous_Calls" id="Asynchronous_Calls"></a>Asynchronous Calls</span></h3>
+<p>Let's load the patient's medications using <tt>SMART.MEDICATIONS_get()</tt>.
+ The most important thing you need to know about all SMART JavaScript 
+APIs is that they are asynchronous: you won't get the meds as a result 
+of the <tt>SMART.MEDICATIONS_get()</tt> call. Instead, you need to specify callback functions that will be invoked when the results are ready: </p>
+<pre class="code javascript">SMART.MEDICATIONS_get().success(<span class="function"><span class="keyword">function</span><span class="params">(meds)</span> {</span>
+  <span class="comment">// do something with those meds</span>
+}).error(<span class="function"><span class="keyword">function</span><span class="params">(err)</span> {</span>
+  <span class="comment">// handle the error</span>
+});
+</pre>
+<p>Why did we design the API this way? Because, in most cases, the SMART
+  container will need to make a call to a server to obtain the requested 
+  data. That could take some time, and it would be very unfortunate if 
+  your app was forced to block for a couple of seconds. Instead, your app 
+  gets control back from the SMART library call almost immediately and is 
+  free to display some pretty progress bar or, more substantively, make 
+  additional API calls to obtain a few data points in parallel. </p>
+<p>
+  <!-- Saved in parser cache with key smartproject:pcache:idhash:77-0!1!0!!en!2!edit=0 and timestamp 20120508033558 -->
+</p>
+<p class="bottom">&nbsp;</p>
+	  </div>    
+      
+      
+      
+      <div class="box">
+	  <h3><span class="mw-headline"><a name="Data_in_RDF_form" id="Data_in_RDF_form"></a>Data in RDF form</span></h3>
+<p>When data becomes available, the SMART framework invokes your 
+callback function, passing it the resulting medications as a parameter. 
+This result is in the form of an SMARTResponse object containing the RDF
+ graph. RDF (Resource Description Framework) is an open and flexible 
+approach to modeling all kinds of data in a graph structure. If you 
+haven't used RDF, you should read our <a href="http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_Quick_Introduction_to_RDF_and_SPARQL" title="Developers Documentation: Quick Introduction to RDF and SPARQL">Quick Introduction to RDF and SPARQL</a>. </p>
+<p>The bottom line is a SMART medication list is an RDF graph that can be easily navigated and queried. For example, if <tt>meds</tt> is an RDF graph, then: </p>
+<pre class="code css"><span class="tag">meds</span><span class="class">.graph</span><span class="class">.where</span>(&quot;?<span class="tag">medication</span> <span class="tag">rdf</span><span class="pseudo">:type</span> <span class="tag">sp</span><span class="pseudo">:Medication&quot;)</span>
+</pre>
+<p>selects all of &quot;objects&quot; in the graph that have a datatype <tt>sp:Medication</tt>, where <tt>sp</tt> stands for <tt><a href="http://smartplatforms.org/ns#" class="external free" title="http://smartplatforms.org/ns#" rel="nofollow">http://smartplatforms.org/ns#</a></tt>, the location of the SMART vocabulary. </p>
+<p>Of course, we want more than just the raw &quot;objects,&quot; we want 
+  their properties, in particular the name of the drug. The following 
+  selects the drug names, which are coded-values, and then the value of 
+  those coded values, which are the actual drug-name strings: </p>
+<pre class="code css"><span class="tag">meds</span><span class="class">.graph</span>
+    <span class="class">.where</span>(&quot;?<span class="tag">medication</span> <span class="tag">rdf</span><span class="pseudo">:type</span> <span class="tag">sp</span><span class="pseudo">:Medication&quot;)</span>
+    <span class="class">.where</span>(&quot;?<span class="tag">medication</span> <span class="tag">sp</span><span class="pseudo">:drugName</span>&nbsp;?<span class="tag">drug_name_code</span>&quot;)
+    <span class="class">.where</span>(&quot;?<span class="tag">drug_name_code</span> <span class="tag">dcterms</span><span class="pseudo">:title</span>&nbsp;?<span class="tag">drugname</span>&quot;);
+</pre>
+<p>This is effectively a JavaScript query on the RDF graph, and it 
+  returns a set of JavaScript objects with properties we're interested in,
+  in particular <tt>drugname</tt>. We can then iterate over the list of returned objects and extract the <tt>drugname</tt> property for each one: </p>
+<pre class="code javascript">   <span class="keyword">var</span> med_names = meds.graph
+     .where(<span class="string">&quot;?medication rdf:type sp:Medication&quot;</span>)
+     .where(<span class="string">&quot;?medication sp:drugName&nbsp;?drug_name_code&quot;</span>)
+     .where(<span class="string">&quot;?drug_name_code dcterms:title&nbsp;?drugname&quot;</span>);
+     
+   med_names.each(<span class="function"><span class="keyword">function</span><span class="params">(i, single_med)</span> {</span>
+     <span class="comment">// do something with single_med.drugname</span>
+   });  <!-- Saved in parser cache with key smartproject:pcache:idhash:77-0!1!0!!en!2!edit=0 and timestamp 20120508033558 -->
+</pre>
+<p class="bottom">&nbsp;</p>
+	  </div>
+        
+        
+    
+    
+    
+    <div class="box">
+	  <h3><span class="mw-headline"><a name="The_Complete_App" id="The_Complete_App"></a>The Complete App</span></h3>
+<p>So, to display the patient's medications, we set up an HTML list, <tt>&lt;ul&gt;</tt>, and we append to it with the name of each drug in our iteration: </p>
+<pre class="code xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="title">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">&quot;http://sample-apps.smartplatforms.org/framework/smart/scripts/smart-api-client.js&quot;</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+ <span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="title">body</span>&gt;</span><span class="tag">&lt;<span class="title">h1</span>&gt;</span>Hello <span class="tag">&lt;<span class="title">span</span> <span class="attribute">id</span>=<span class="value">&quot;name&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+ 
+ <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">id</span>=<span class="value">&quot;med_list&quot;</span>&gt;</span>
+ <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+ 
+ <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
+ SMART.ready(<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+   document.getElementById(<span class="string">'name'</span>).innerHTML = SMART.record.full_name;
+   SMART.MEDICATIONS_get().success(<span class="function"><span class="keyword">function</span><span class="params">(meds)</span> {</span>
+     <span class="keyword">var</span> med_names = meds.graph
+       .where(<span class="string">&quot;?medication rdf:type sp:Medication&quot;</span>)
+       .where(<span class="string">&quot;?medication sp:drugName&nbsp;?drug_name_code&quot;</span>)
+       .where(<span class="string">&quot;?drug_name_code dcterms:title&nbsp;?drugname&quot;</span>);
+     
+     <span class="keyword">var</span> med_list = document.getElementById(<span class="string">'med_list'</span>);
+     med_names.each(<span class="function"><span class="keyword">function</span><span class="params">(i, single_med)</span> {</span>
+       med_list.innerHTML += <span class="string">&quot;&lt;li&gt; &quot;</span> + single_med.drugname + <span class="string">&quot;&lt;/li&gt;&quot;</span>;
+     });
+   }).error(<span class="function"><span class="keyword">function</span><span class="params">(err)</span> {</span>
+         alert (<span class="string">&quot;An error has occurred&quot;</span>);
+   });
+ });
+ </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+ <span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</pre>
+<p>And that's it! In a few lines of HTML and JavaScript code, we've got 
+  ourselves an app that can request the medications from the current 
+  record and display them. <!-- Saved in parser cache with key smartproject:pcache:idhash:77-0!1!0!!en!2!edit=0 and timestamp 20120508033558 -->
+</p>
+<p class="bottom">&nbsp;</p>
+	  </div>    
+  
+  
+  
+  <div class="box">
+	  <h3><span class="mw-headline"><a name="What_Next.3F" id="What_Next.3F"></a>What Next?</span></h3>
+      <ul>
+        <li><big> learn more about SMART Connect with <a href="#" title="Developers Documentation: GotStatins - SMART Connect in Action">GotStatins</a>. </big></li>
+        <li><big> build a more powerful SMART App, learn <a href="#" title="HOWTO Build a SMART App - REST API Calls">HOWTO Build a SMART App - REST API Calls</a>. </big></li>
+        <li><big> build SMART Apps that work while the user is offline: <a href="#" title="HOWTO Build SMART Background and Helper Apps">HOWTO Build SMART Background and Helper Apps</a>. </big><!-- Saved in parser cache with key smartproject:pcache:idhash:77-0!1!0!!en!2!edit=0 and timestamp 20120508033558 -->
+        </li>
+      </ul>
+      <p>&nbsp;</p>
+</div>
+  
+  
+  
+        
+        
+        
+  </div>
+</div>
+<div id="footer">
+	<p>This page was last modified 17:43, 28 March 2012.
+This page has been accessed 21,360 times.</a>.</p>
+</div>
+</body>
+</html>
+
+			<div style="text-align: center; margin-top: 1.0em;">
+			
+			</div>
+		

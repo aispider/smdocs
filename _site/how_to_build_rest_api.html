@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Smart</title>
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+<link href="css/default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+	<ul id="menu">
+		<li><a href="#" accesskey="1" title="">Article</a></li>
+		<li><a href="#" accesskey="2" title="">discussion</a></li>
+		<li><a href="#" accesskey="3" title="">View source</a></li>
+		<li><a href="#" accesskey="4" title="">history</a></li>
+		<li></li>
+	</ul>
+	<form id="search" method="get" action="">
+		<fieldset>
+		<input name="input1" type="text" id="input1" />
+		<input name="input2" type="submit" id="input2" value="Search" />
+		</fieldset>
+	</form>
+</div>
+<div id="content">
+	<div id="colOne" sty>
+    <div style="text-align:center; background:#f6f6f6;" ><img src="images/logo.gif" alt="" width="160" height="124" /></div>
+		
+		<div class="box">
+			<h3>Nvigation</h3>
+			<ul class="bottom">
+				<li class="first"><a href="index.html">Main Page</a></li>
+				
+			</ul>
+		</div>
+        <div class="box">
+			<h3>Totorials</h3>
+			<ul class="bottom">
+				<li class="first"><a href="how_to_build.html">Build a SMART App</a></li>
+				<li><a href="how_to_build_rest_api.html">App using REST API</a></li>
+				<li><a href="#">Background + Helper Apps</a></li>
+				<li><a href="#">Frame UI Apps</a></li>
+				<li><a href="#">Got Statins? App</a></li>
+				<li><a href="#">RxReminder App</a></li>
+			</ul>
+		</div>
+		<div class="box">
+			<h3>Data Modeling + Querying</h3>
+			<ul class="bottom">
+				<li class="first"><a href="#">Intro to RDF and SPARQL</a></li>
+				<li><a href="#">SPARQL Examples for SMART</a></li>
+				<li><a href="#">SMART data: best practices</a></li>
+				<li><a href="#">$.Deferred for parallel queries</a></li>
+				
+			</ul>
+		</div>
+        
+        <div class="box">
+			<h3>Reference</h3>
+			<ul class="bottom">
+				<li class="first"><a href="#">Data Model</a></li>
+				<li><a href="#">REST API</a></li>
+				<li><a href="#">App Manifest</a></li>
+				<li><a href="#">Change Log</a></li>
+				
+			</ul>
+		</div>
+        
+        <div class="box">
+			<h3>Libraries</h3>
+			<ul class="bottom">
+				<li class="first"><a href="#">Javascript</a></li>
+				<li><a href="#">Python</a></li>
+				<li><a href="#">Java</a></li>
+				<li><a href="#">.NET</a></li>
+                <li><a href="#">Container Javascript</a></li>                
+				
+			</ul>
+		</div>
+        
+         <div class="box">
+			<h3>Presentation (2010-08-26)</h3>
+			<ul class="bottom">
+				<li class="first"><a href="#">Architecture</a></li>
+				<li><a href="#">Governance</a></li>
+				<li><a href="#">Demo</a></li>
+				              
+				
+			</ul>
+		</div>
+        <div class="box">
+			<h3>Downloads</h3>
+			<ul class="bottom">
+				<li class="first"><a href="#">Download Source + SMART VM</a></li>			              
+				
+			</ul>
+		</div>
+        
+        <div class="box">
+			<h3>Toolbox</h3>
+			<ul class="bottom">
+				<li class="first"><a href="#">What links here</a></li>
+				<li><a href="#">Related changes</a></li>
+				<li><a href="#">Upload file</a></li>
+				 <li><a href="#">Special pages</a></li>
+				<li><a href="#">Printable version</a></li>      
+                <li><a href="#">Permanent link</a></li>                   
+				
+			</ul>
+		</div>
+        
+  </div>
+	<div id="colTwo">
+		<h2><span class="firstHeading">HOWTO Build a SMART App - REST API Calls</span></h2>
+<p><big>This document shows you how to build a more advanced SMART App with server-side logic and REST API Calls. </big></p>
+<p><big>You should first read the <a href="index.html" title="Main Page">Main Page</a> and <a href="how_to_build.html" title="HOWTO Build a SMART App">HOWTO Build a SMART App</a>. </big></p>
+<table id="toc" class="toc" summary="Contents">
+  <tbody>
+    <tr>
+      <td><div id="toctitle">
+        <h2>Contents</h2>
+      </div>
+        <ul>
+          <li class="toclevel-1"><a href="#ScreenCast"><span class="tocnumber">1</span> <span class="toctext">ScreenCast</span></a></li>
+          <li class="toclevel-1"><a href="#Server_to_Server_Authentication"><span class="tocnumber">2</span> <span class="toctext">Server to Server Authentication</span></a>
+            <ul>
+              <li class="toclevel-2"><a href="#OAuth"><span class="tocnumber">2.1</span> <span class="toctext">OAuth</span></a></li>
+              <li class="toclevel-2"><a href="#Passing_Tokens_via_URL_Parameter"><span class="tocnumber">2.2</span> <span class="toctext">Passing Tokens via URL Parameter</span></a></li>
+              <li class="toclevel-2"><a href="#Using_SMART_Client_Libraries"><span class="tocnumber">2.3</span> <span class="toctext">Using SMART Client Libraries</span></a></li>
+            </ul>
+          </li>
+          <li class="toclevel-1"><a href="#Obtaining_SMART_Health_Data"><span class="tocnumber">3</span> <span class="toctext">Obtaining SMART Health Data</span></a></li>
+          <li class="toclevel-1"><a href="#What_Next.3F"><span class="tocnumber">4</span> <span class="toctext">What Next?</span></a></li>
+        </ul></td>
+    </tr>
+  </tbody>
+</table>
+<div class="box">
+<h3><span class="mw-headline"><a name="ScreenCast" id="ScreenCast"></a>ScreenCast</span></h3>
+			<p>We are re-recording the screencast to catch up with the latest API 
+<a href="http://vimeo.com/20113823" class="external text" title="http://vimeo.com/20113823" rel="nofollow">old screencast</a>.</p>
+			<p class="bottom">&nbsp;</p>
+    </div>
+		<div class="box">
+			<h3><span class="mw-headline"><a name="Server_to_Server_Authentication" id="Server_to_Server_Authentication"></a>Server to Server Authentication</span></h3>
+		  <p>When your app was making JavaScript API calls, authentication and 
+authorization were entirely transparent to you, the app builder, because
+ the SMART Container was able to take care of it all: the JavaScript API
+ call simply notified the outer frame of the data request, and the 
+outer-frame knows who the logged-in user is and what medical record 
+they're currently considering. </p>
+		  <p>Now, we consider the case where you want the <em>backend of your app</em> to obtain data directly from the SMART Container, e.g. the SMART 
+		    Reference EMR, using the REST API. In that case, the SMART Container 
+		    doesn't know a-priori who is making the call and whether they're 
+		    authorized to do so. We need to authenticate the call somehow, and you, 
+		    the app builder, need to know how to ensure that your calls are properly
+		    authenticated. </p>
+<p class="bottom">&nbsp;</p>
+		</div>
+        
+        <div class="box">
+		  <h3><span class="mw-headline"><a name="OAuth" id="OAuth"></a>OAuth</span></h3>
+	    <p>For this purpose, we use <a href="http://oauth.net/" class="external text" title="http://oauth.net" rel="nofollow">OAuth</a>, an open-standard for access delegation. </p>
+	    <p>OAuth bundles two important features: </p>
+        <ol>
+          <li> a way to label and sign HTTP requests using an identifier token and a secret string </li>
+          <li> a dance involving the user's browser, the data server, and the
+            server that wishes to consume the data, which, when the user approves 
+            the exchange, provides the data consumer with the token and secret 
+            needed to perform the authenticated API calls as per (1). </li>
+        </ol>
+        <p>SMART employs (1), but implements a much simpler approach to (2), 
+          providing your app with the requisite token and secret. We'll describe 
+          this simpler approach here. At a high-level, your app can simply look 
+          for a URL parameter called `oauth_header` set by the SMART JavaScript 
+          client library. In this value, you will find the OAuth token and secret 
+          you need. </p>
+      </div>
+      
+      
+      
+      <div class="box">
+			<h3><span class="mw-headline"><a name="Passing_Tokens_via_URL_Parameter" id="Passing_Tokens_via_URL_Parameter"></a>Passing Tokens via URL Parameter</span></h3>
+	<p>The SMART container will pass all necessary fields to your app via 
+the `oauth_header` URL parameter.  Specifically, the actual request sent
+ to your app's backend server for <tt>index.html</tt> looks like this: </p>
+    <pre>GET /index.html?oauth_header={Header value here...}
+    </pre>
+    <p>You need to first extract that header from the GET parameter: </p>
+    <pre>oauth_header = web.input().oauth_header
+    </pre>
+    <p>You'll also to need to URL-decode it: </p>
+    <pre class="code python"> oauth_header = urllib.unquote(oauth_header)
+    </pre>
+    <p>The field contains a complete OAuth Authorization header that includes a few extra fields, including notably <tt>smart_record_id</tt>, <tt>smart_oauth_token</tt> and <tt>smart_oauth_token_secret</tt>. <tt>smart_record_id</tt> indicates the medical record ID of the current context, while the OAuth
+      token and secret are the credentials your app needs to make REST API 
+      calls back into the SMART EMR. Why, then, are they themselves delivered 
+      in  OAuth authorization header format? So you can verify that these 
+      tokens are authentic before you actually use them! </p>
+    <p>In other words, the SMART container is sending you credentials 
+      you can use to sign your API request. Those credentials are, themselves,
+      signed, so you know they're okay to use. </p>
+    <p>Thankfully, you don't need to worry too much about the details, 
+      because we provide you with the utilities you need to extract the fields
+      you need quickly and efficiently: </p>
+    <pre class="code python"> <span class="comment"># parse it into a python dictionary</span>
+ oauth_params = oauth.parse_header(oauth_header)
+    </pre>
+    <p>Then get the specific parameters you need to sign your own API calls: </p>
+    <pre class="code python"> record_id = oauth_params[<span class="string">'smart_record_id'</span>]
+ resource_credentials = {<span class="string">'oauth_token'</span>:        oauth_params[<span class="string">'smart_oauth_token'</span>],
+                         <span class="string">'oauth_token_secret'</span>: oauth_params[<span class="string">'smart_oauth_token_secret'</span>]}
+    </pre>
+    <p>The SMART Connect OAuth Header contains a few more parameters that will prove useful: </p>
+    <ul>
+      <li> <tt>smart_app_id</tt>: the identifier of the app being invoked </li>
+      <li> <tt>smart_container_api_base</tt>: the base URL for API calls into the SMART EMR </li>
+    </ul>
+    <p>Now, why would your app need these, since presumably it knows its own
+      ID and where the SMART container is located to make API, right? </p>
+    <p>In the simple case, yes, but in more advanced cases, your backend
+      server might support multiple simultaneous apps made available to 
+      multiple SMART Containers. Thus, in a given setting, your app needs to 
+      know definitely which SMART Container it's connecting to and, if you're 
+      using one server to host multiple apps, which of your apps is being 
+      invoked in the first place. </p>
+<p class="bottom">&nbsp;</p>
+	  </div>
+        
+  
+  
+  <div class="box">
+	  <h3><span class="mw-headline"><a name="Using_SMART_Client_Libraries" id="Using_SMART_Client_Libraries"></a>Using SMART Client Libraries</span></h3>
+<p>Read up on the <a href="http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_SMART_App_Python_Library" title="Developers Documentation: SMART App Python Library">SMART Python Library</a>. </p>
+<p>Using those instructions, you can instantiate a <tt>SmartClient</tt> with the credentials obtained above: </p>
+<pre class="code python"> client = SmartClient(<span class="string">'my-app@apps.smartplatforms.org'</span>,
+                      {<span class="string">'api_base'</span>&nbsp;: <span class="string">'http://sandbox-api.smartplatforms.org'</span>},
+                      {<span class="string">'consumer_key'</span>&nbsp;: <span class="string">'my-app@apps.smartplatforms.org'</span>,
+                       <span class="string">'consumer_secret'</span>&nbsp;: <span class="string">'smartapp-secret'</span>},
+                      resource_credentials)
+</pre>
+<p>Since we're working against the SMART Reference EMR Sandbox, the <tt>APP_ID</tt> and consumer-level credentials are all fixed. Of course when connecting
+  against a different SMART Container (e.g. your own), those will 
+  probably change. 
+  <!-- Saved in parser cache with key smartproject:pcache:idhash:77-0!1!0!!en!2!edit=0 and timestamp 20120508033558 -->
+</p>
+<p class="bottom">&nbsp;</p>
+	  </div>  
+      
+      <div class="box">
+	  <h3><span class="mw-headline"><a name="Obtaining_SMART_Health_Data" id="Obtaining_SMART_Health_Data"></a>Obtaining SMART Health Data</span></h3>
+<p>With our <tt>smart_client</tt> instance ready to go, loaded with the right credentials, we can start making API calls. Let's get the medication list: </p>
+<pre class="code python">    medications = smart_client.records_X_medications_GET(record_id = record_id)
+</pre>
+<p>Just like in the <a href="http://wiki.chip.org/smart-project/index.php/HOWTO_Build_a_SMART_App" title="HOWTO Build a SMART App">first SMART App we built</a>, the result is an SMARTResponse object containing an RDF graph of data, which we can query for just the fields we want: </p>
+<pre class="code python">    query = <span class="string">&quot;&quot;&quot;
+        PREFIX dcterms:&lt;http://purl.org/dc/terms/&gt;
+        PREFIX sp:&lt;http://smartplatforms.org/terms#&gt;
+        PREFIX rdf:&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+        SELECT &nbsp;?drugname&nbsp;?rxcui
+        WHERE {
+          &nbsp;?med rdf:type sp:Medication .
+          &nbsp;?med sp:drugName&nbsp;?drugname_code .
+          &nbsp;?drugname_code dcterms:title&nbsp;?drugname .
+          &nbsp;?drugname_code sp:code&nbsp;?rxcui_url .
+          &nbsp;?rxcui_url dcterms:identifier&nbsp;?rxcui .
+        }
+        &quot;&quot;&quot;</span>
+ 
+    med_names_and_cuis = medications.graph.query(query)
+    meds = [{<span class="string">'name'</span>: med[<span class="number">0</span>], <span class="string">'rxcui'</span>: med[<span class="number">1</span>]} <span class="keyword">for</span> med <span class="keyword">in</span> med_names_and_cuis]
+</pre>
+<p>So far, we're not doing anything novel compared to our SMART Connect 
+  App. Let's make use of this fully capable backend we have, and integrate
+  this data with other information. We'll use <a href="http://rxnav.nlm.nih.gov/" class="external text" title="http://rxnav.nlm.nih.gov" rel="nofollow">RxNav</a>, the National Library of Medicine's resource for RxNorm. In particular, we'll pull out the ingredients for each medication: </p>
+<pre class="code python">    <span class="keyword">for</span> med <span class="keyword">in</span> meds:
+      rxnav_info_xml = urllib.urlopen(<span class="string">&quot;http://rxnav.nlm.nih.gov/
+REST/rxcui/%s/related?rela=has_ingredient&quot;</span> % med[<span class="string">'rxcui'</span>]).read()
+      info = ElementTree.fromstring(rxnav_info_xml)
+      med[<span class="string">'ingredients'</span>] = 
+[ing.text <span class="keyword">for</span> ing <span class="keyword">in</span> info.findall(<span class="string">'relatedGroup/conceptGroup/conceptProperties/name'</span>)]
+</pre>
+<p>Most of that code above is to quickly parse the XML we get back from RxNav and obtain the ingredient names. </p>
+<p>Now that we've combined the SMART record data with a third-party data source, we can just render our HTML: </p>
+<pre class="code python">    meds_html = <span class="string">&quot;\n&quot;</span>.join([<span class="string">&quot;&lt;li&gt;%s&lt;br /&gt;&lt;small&gt;ingredients: %s&lt;/small&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&quot;</span> % (str(med[<span class="string">'name'</span>]), <span class="string">&quot;, &quot;</span>.join(med[<span class="string">'ingredients'</span>])) <span class="keyword">for</span> med <span class="keyword">in</span> meds])
+</pre>
+<p>and we're done. </p>
+<p>(Note that we're using clunky string concatenation to produce our
+  HTML. Of course we recommend using a templating system, but we didn't 
+  want to burden the explanation with a templating language at this 
+  point.) </p>
+<p class="bottom">&nbsp;</p>
+	  </div>    
+      
+      
+      
+      <div class="box">
+	  <h3><span class="mw-headline"><a name="What_Next.3F" id="What_Next.3F"></a>What Next?</span></h3>
+      <ul>
+        <li><big> learn more about SMART REST API Calls with <a href="http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_RxReminder_-_SMART_REST_in_Action" title="Developers Documentation: RxReminder - SMART REST in Action">RxReminder</a>. </big></li>
+        <li><big> learn <a href="http://wiki.chip.org/smart-project/index.php/HOWTO_Build_SMART_Background_and_Helper_Apps" title="HOWTO Build SMART Background and Helper Apps">HOWTO Build SMART Background and Helper Apps</a> so your App can take action while the user is offline. </big>
+          <!-- Saved in parser cache with key smartproject:pcache:idhash:77-0!1!0!!en!2!edit=0 and timestamp 20120508033558 -->
+</li>
+      </ul>
+<p class="bottom">&nbsp;</p>
+	  </div>
+  </div>
+</div>
+<div id="footer">
+	<p>This page was last modified 17:43, 28 March 2012.
+This page has been accessed 21,360 times.</a>.</p>
+</div>
+</body>
+</html>
+
+			<div style="text-align: center; margin-top: 1.0em;">
+			
+			</div>
+		
